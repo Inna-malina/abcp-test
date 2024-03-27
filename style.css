@@ -1,0 +1,164 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1200px;
+  background: #C0DBD9;
+  margin: 0px auto;
+}
+
+.center {
+  max-width: 1170px;
+  margin: 0px auto;
+}
+
+nav {
+  background: #7FAFF6;
+  padding: 30.5px 0px 30.5px 30px;
+  margin: 0px 0px 15px 0px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background: #A5C7F9;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border: none;
+  padding: 8px 0px;
+  width: 206px;
+  text-decoration: none;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.green {
+  counter-reset: myCounter;
+  list-style-type: none;
+  display: grid;
+  background: #B3F95A;
+  gap: 15px;
+  width: 100%;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 198px 198px;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.green-item {
+  position: relative;
+  background: #8AD191;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-item::before {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+  color: white;
+  display: inline-block;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 53px;
+}
+
+.item_1 {
+  grid-column: 1/ span 3;
+
+}
+
+.item_2 {
+  grid-column: 4/ span 4;
+}
+
+.item_3 {
+  grid-column: 8/ span 2;
+}
+
+.item_4 {
+  grid-column: 1/ span 7;
+}
+
+.item_5 {
+  grid-column: 8/ span 2;
+}
+
+.blue {
+  padding: 30px;
+  width: 100%;
+  background: #88B5BF;
+  display: flex;
+  gap: 30px;
+}
+
+.blue li {
+  width: 25%;
+  height: 199px;
+  background: #0D89B0;
+}
+
+footer {
+  margin: 100px 0px 0px 0px;
+  background: #7FAFF6;
+  width: 100%;
+  height: 100px;
+}
+
+/* модальное окно */
+.modal-window {
+  display: none;
+}
+
+.modal-window:target {
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(75, 75, 75, 0.349);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.close {
+  cursor: pointer;
+  z-index: 100;
+  content: url(close.png);
+  position: absolute;
+  display: block;
+  width: 43px;
+  height: auto;
+  top: 10px;
+  right: 10px;
+}
+
+
+.popup-box {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  font-size: 53px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
